@@ -39,8 +39,8 @@ stages:
         tags: |
           $(tag)
 
-- publish: '$(Build.SourceDirectory)/manifests'
-  artifact: manifests
+    - publish: '$(Build.SourceDirectory)/manifests'
+      artifact: manifests
 
 - stage: 'Deploy'
   displayName: 'Deploy the containers'
