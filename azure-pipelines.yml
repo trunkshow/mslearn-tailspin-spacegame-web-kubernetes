@@ -37,7 +37,7 @@ stages:
         containerRegistry: 'Container Registry Connection'
         tags: |
           $(tag)
-    - publish: '$(Build.SourceDirectory)/manifests'
+    - publish: '$(Build.SourcesDirectory)/manifests'
       artifact: manifests
 
 - stage: 'Deploy'
